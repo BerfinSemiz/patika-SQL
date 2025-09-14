@@ -1,0 +1,23 @@
+--1. country tablosunda 'A' ile başlayıp 'a' ile biten ülke isimlerini listeleyiniz.
+SELECT country 
+FROM country 
+WHERE country LIKE 'A%a';
+
+--2. country tablosunda adı 6 harfli olup sonu 'n' ile biten ülke isimlerini listeleyiniz.
+SELECT country 
+FROM country 
+WHERE country LIKE '_____n';
+-- (Her '_' bir karakter demek, yani toplam 6 harfli olacak.)
+
+--3. film tablosunda title içinde (büyük/küçük harf fark etmeksizin) 't' geçen en az 4 film ismini listeleyiniz.
+SELECT title 
+FROM film 
+WHERE title ILIKE '%t%' 
+LIMIT 4;
+
+--4. film tablosunda 'c' ile başlayan, uzunluğu 90 dakikadan fazla ve rental_rate değeri 2.99 olan filmleri listeleyiniz.
+SELECT * 
+FROM film 
+WHERE title LIKE 'C%' 
+  AND length > 90 
+  AND rental_rate = 2.99;
