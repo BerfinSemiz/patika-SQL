@@ -1,0 +1,20 @@
+--1. film tablosunda adı 'n' harfi ile biten filmleri uzunluklarına göre büyükten küçüğe sırala ve ilk 5 tanesini getir.
+SELECT title, length 
+FROM film 
+WHERE title LIKE '%n' 
+ORDER BY length DESC 
+LIMIT 5;
+
+--2. film tablosunda adı 'n' harfi ile biten filmleri uzunluklarına göre küçükten büyüğe sırala, ilk 5 tanesini atla ve sonraki 5 tanesini getir.
+SELECT title, length 
+FROM film 
+WHERE title LIKE '%n' 
+ORDER BY length ASC 
+LIMIT 5 OFFSET 5;
+
+--3. customer tablosunda store_id değeri 1 olan müşterileri soyadlarına göre Z’den A’ya sırala ve ilk 4 tanesini getir.
+SELECT * 
+FROM customer 
+WHERE store_id = 1 
+ORDER BY last_name DESC 
+LIMIT 4;
