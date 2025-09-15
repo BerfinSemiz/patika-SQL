@@ -13,12 +13,12 @@ WHERE title LIKE 'T%'
   AND rating = 'G';
 
 --4. country tablosunda adı 5 harften oluşan ülke sayısını bulunuz.
-SELECT COUNT(*) AS country_count 
+SELECT COUNT(*) 
 FROM country 
 WHERE country LIKE '_____';
 -- (Her '_' bir karakteri temsil eder, yani tam 5 harfli isimler.)
 
 --5. city tablosunda ismi 'r' harfi ile biten şehir sayısını bulunuz.
-SELECT COUNT(*) AS city_count 
+SELECT COUNT(*) 
 FROM city 
 WHERE city LIKE '%r';
