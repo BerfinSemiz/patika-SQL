@@ -1,0 +1,22 @@
+--1. film tablosunda bulunan farklı rating değerlerini listeleyiniz.
+SELECT rating 
+FROM film 
+GROUP BY rating;
+
+--2. film tablosunda her replacement_cost için kaç film olduğunu sayınız ve 50’den fazla olanları listeleyiniz.
+SELECT replacement_cost, COUNT(*)  
+FROM film 
+GROUP BY replacement_cost 
+HAVING COUNT(*) > 50;
+
+--3. customer tablosunda her store_id için kaç müşteri olduğunu sayınız.
+SELECT store_id, COUNT(*) 
+FROM customer 
+GROUP BY store_id;
+
+--4. city tablosunda her country_id için kaç şehir olduğunu sayınız, en fazla şehir sayısına sahip ülkeyi bulunuz.
+SELECT country_id, COUNT(*) 
+FROM city 
+GROUP BY country_id 
+ORDER BY COUNT(*) DESC 
+LIMIT 1;
